@@ -1,0 +1,113 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4733665815941324964",
+      "lastPropertyId": "2:7051089632502639643",
+      "name": "Owner",
+      "properties": [
+        {
+          "id": "1:4584872182693015038",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7051089632502639643",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:2571066896849275845",
+      "lastPropertyId": "6:6419226084197070221",
+      "name": "Task",
+      "properties": [
+        {
+          "id": "1:4373376262733869064",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:279383698846468945",
+          "name": "text",
+          "type": 9
+        },
+        {
+          "id": "3:7209755372777693472",
+          "name": "status",
+          "type": 1
+        },
+        {
+          "id": "5:7905319683714900058",
+          "name": "eventId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:5808736219306154455",
+          "relationTarget": "Event"
+        },
+        {
+          "id": "6:6419226084197070221",
+          "name": "ownerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "3:1305693043254246626",
+          "relationTarget": "Owner"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:3551898256195605771",
+      "lastPropertyId": "4:3749427874767608986",
+      "name": "Event",
+      "properties": [
+        {
+          "id": "1:8762213239353830826",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5227348025497959759",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4178346561255929134",
+          "name": "date",
+          "type": 10
+        },
+        {
+          "id": "4:3749427874767608986",
+          "name": "location",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:3551898256195605771",
+  "lastIndexId": "3:1305693043254246626",
+  "lastRelationId": "2:8508689575237190702",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [
+    2601211407714534012
+  ],
+  "retiredPropertyUids": [
+    5908919717544633790
+  ],
+  "retiredRelationUids": [
+    3620711517082948222,
+    8508689575237190702
+  ],
+  "version": 1
+}
