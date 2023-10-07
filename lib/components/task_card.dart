@@ -4,11 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:object_box/models.dart';
 
 import '../main.dart';
-import '../models.dart';
 import 'delete_menu.dart';
 
-/// Styling for an event card. Includes the task name, owner and a checkmark.
-/// A card can be deleted through the delete button inside the menu bar.
 class TaskCard extends StatefulWidget {
   final Task? task;
 
@@ -98,7 +95,7 @@ class _TaskCardState extends State<TaskCard> {
                     alignment: Alignment.centerLeft,
                     child: Row(
                       children: [
-                        Text("Assigned to: ${currentOwner?.name}",
+                        Text("Atribuida para: ${currentOwner?.name}",
                             style: taskStatus!
                                 ? const TextStyle(
                                     fontSize: 15.0,
@@ -135,6 +132,6 @@ class _TaskCardState extends State<TaskCard> {
 
   void onSelected(BuildContext context, Task task) {
     objectBox.taskBox.remove(task.id);
-    debugPrint("Task ${task.text} deleted");
+    debugPrint("Tarefa ${task.text} removida");
   }
 }

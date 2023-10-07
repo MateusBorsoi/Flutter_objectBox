@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'models.dart';
 import 'objectbox.g.dart';
 
-/// Provides access to the ObjectBox Store throughout the app.
-///
-/// Create this in the apps main function.
 class ObjectBox {
   late final Store store;
 
@@ -23,9 +20,7 @@ class ObjectBox {
     }
   }
 
-  /// Create an instance of ObjectBox to use throughout the app.
   static Future<ObjectBox> create() async {
-    // Future<Store> openStore() {...} is defined in the generated objectbox.g.dart
     final store = await openStore();
     return ObjectBox._create(store);
   }
